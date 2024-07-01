@@ -28,11 +28,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation("javax.validation:validation-api")
+	implementation 'javax.validation:validation-api:2.0.1.Final'
 
 	implementation 'org.projectlombok:lombok'
 	implementation 'com.mysql:mysql-connector-j'
-	implementation("javax.persistence:javax.persistence-api:2.2")
+	implementation 'javax.persistence:javax.persistence-api:2.2'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -41,7 +41,6 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
 	runtimeOnly 'mysql:mysql-connector-java'
-
 }
 
 tasks.named('test') {
