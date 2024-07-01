@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContactServiceImpl implements ContactService {
@@ -18,4 +19,22 @@ public class ContactServiceImpl implements ContactService {
     public List<ContactEntity> findAll() {
         return contactRepository.findAll();
     }
+
+    @Override
+    public void save(ContactEntity contact) {
+        contactRepository.save(contact);
+    }
+
+    @Override
+    public void delete(ContactEntity contactEntity) {
+        contactRepository.delete(contactEntity);
+    }
+
+    @Override
+    public ContactEntity getOne(Long id) {
+        Optional<ContactEntity> contactOptional = contactRepository.findById(id);
+        return contactOptional.orElse(null);
+    }
+
+
 }

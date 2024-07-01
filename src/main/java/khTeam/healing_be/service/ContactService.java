@@ -9,5 +9,11 @@ import java.util.List;
 
 public interface ContactService  {
     List<ContactEntity> findAll();
+
+    ContactEntity getOne(Long id);
+
+    void save(ContactEntity contactEntity);
+
+    void delete(ContactEntity contactEntity);
 }
 
